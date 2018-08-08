@@ -6,8 +6,8 @@ The Eureka server is a service discovery pattern implementation, where every mic
 The Eureka server itself is a microservice which treats itself as a Eureka client.
 The settings in application.yml declare it is a server
 ```
-	registerWithEureka: false
-    fetchRegistry: false
+registerWithEureka: false
+fetchRegistry: false
 ``` 
 ### cluster Eureka server
 https://blog.csdn.net/forezp/article/details/81041101  
@@ -52,13 +52,13 @@ add @HystrixCommand on service method
 create the fallback method
 ```
 @HystrixCommand(fallbackMethod = "hiError")
-    public String hiService(String name) {
-        return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
-    }
+public String hiService(String name) {
+    return restTemplate.getForObject("http://SERVICE-HI/hi?name="+name,String.class);
+}
 
-    public String hiError(String name) {
-        return "hi,"+name+",sorry,error!";
-    }
+public String hiError(String name) {
+    return "hi,"+name+",sorry,error!";
+}
 ```
 Once the service is not available, the hiError method is executed as fallback.
 
