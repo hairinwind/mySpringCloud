@@ -1,9 +1,15 @@
 server:
   port: ${SERVER_PORT}
+# ${SERVER_PORT} 8762
 
 spring:
   application:
     name: service-hi
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8888
 
 eureka:
   client:
