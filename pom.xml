@@ -23,6 +23,8 @@
         <module>service-hi</module>
 		<module>service-ribbon</module>
         <module>config-server</module>
+        <module>sleuth-service-hi</module>
+        <module>sleuth-service-miya</module>
     </modules>
 
     <properties>
