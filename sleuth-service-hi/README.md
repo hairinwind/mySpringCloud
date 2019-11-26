@@ -4,7 +4,7 @@ https://blog.csdn.net/forezp/article/details/81041078
 ## download and run the zipkin
 download it from https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
 ```$xslt
-java -jar zipkin-server-2.10.1-exec.jar
+java -jar zipkin-server-2.12.9-exec.jar
 ```
 Once it is started, visit http://localhost:9411
 
