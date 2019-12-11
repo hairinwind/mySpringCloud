@@ -23,4 +23,5 @@ spring.zipkin.base-url=http://localhost:9411
 
 Run both sleuth-service-hi and sleuth-service-miya, try 
 http://localhost:8989/miya and http://localhost:8988/hi  
-Then visit http://localhost:9411 again "Find a trace", you can see the trace result.
+Then visit http://localhost:9411 again "Find a trace", you can see the trace result.  
+Stop the service-miya and visit the service-hi, you would get the error as service-hi needs call service-miya. Check the "Find a trace" again, you would see the error "no response when calling service-miya". 

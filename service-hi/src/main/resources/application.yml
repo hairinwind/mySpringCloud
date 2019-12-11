@@ -3,15 +3,12 @@ server:
 # ${SERVER_PORT} 8762
 
 spring:
-  application:
-    name: service-hi
   cloud:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${SPRING_EUREKA_SERVER_URI:http://localhost:8761/eureka/}
